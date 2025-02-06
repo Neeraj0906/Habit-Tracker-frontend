@@ -12,7 +12,7 @@ const Navbar = () => {
         <Box display="flex" alignItems="center" flexGrow={1}>
           <IconButton edge="start" color="inherit" aria-label="logo">
             <img
-              src="src/assets/habit-tracker-app-icon.jpg" // Replace with your actual image path
+              src="/assets/habit-tracker-app-icon.jpg" // Replace with your actual image path
               alt="Habit Tracker Logo"
               style={{ width: '40px', height: '40px', borderRadius: '50%' }}
             />
