@@ -21,7 +21,7 @@ const Signup = () => {
     e.preventDefault();
     setError('');
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', formData);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, formData);
       console.log('Backend Response:', response.data); // Debugging log
       navigate('/login');
     } catch (err) {
