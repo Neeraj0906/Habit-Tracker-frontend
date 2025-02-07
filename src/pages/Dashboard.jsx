@@ -46,7 +46,7 @@ const Dashboard = () => {
     const fetchHabitsAndData = async () => {
       try {
         const habitsResponse = await axios.get(
-          "http://localhost:5000/api/habits",
+          "https://habit-tracker-backend-b8nl.onrender.com/api/habits",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -54,7 +54,7 @@ const Dashboard = () => {
         setHabits(habitsResponse.data);
 
         const userResponse = await axios.get(
-          "http://localhost:5000/api/auth/me",
+          "https://habit-tracker-backend-b8nl.onrender.com/api/auth/me",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -89,7 +89,7 @@ const Dashboard = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/habits",
+        "https://habit-tracker-backend-b8nl.onrender.com/api/habits",
         newHabit,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -104,7 +104,7 @@ const Dashboard = () => {
   const handleCompleteHabit = async (habitId) => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/habits/${habitId}/complete`,
+        `https://habit-tracker-backend-b8nl.onrender.com/api/habits/${habitId}/complete`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
